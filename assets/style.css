@@ -1,0 +1,71 @@
+/* Thiết lập màu sắc chủ đạo của dự án (nếu bạn muốn đổi màu Primary mặc định của Bootstrap) */
+:root {
+  --primary-color: #0d6efd; /* Xanh dương Bootstrap */
+  --hover-color: #0b5ed7;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* ============================
+   HIỆU ỨNG CARD CHUYÊN KHOA
+   ============================ */
+.specialty-card {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Khi hover (di chuột) vào thẻ chuyên khoa sẽ nảy nhẹ lên và có bóng đổ đậm hơn */
+.specialty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid var(--primary-color) !important;
+}
+
+.specialty-card:hover h5 {
+  color: var(--primary-color);
+}
+
+/* ============================
+   HIỆU ỨNG CARD BÁC SĨ
+   ============================ */
+.doctor-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.doctor-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Hover vào ảnh bác sĩ phóng to nhẹ (hiệu ứng tinh tế) */
+.doctor-card img {
+  transition: transform 0.3s ease;
+}
+
+.doctor-card:hover img {
+  transform: scale(1.05);
+}
+/* Custom cho nút chọn giờ khám */
+.btn-outline-primary {
+  transition: all 0.2s ease;
+}
+
+/* Khi khung giờ được bệnh nhân nhấp chọn */
+.btn-outline-primary.active,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+  border-color: var(--primary-color) !important;
+}
+
+/* Giờ đã bị đặt (disabled) */
+.btn-outline-secondary:disabled {
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+  color: #adb5bd;
+  cursor: not-allowed;
+}
